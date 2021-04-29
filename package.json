@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "npx nodemon todos.js",
-    "debug": "nodemon --inspect todos.js"
+    "debug": "nodemon --inspect todos.js",
+    "heroku-postbuild": "npm install --production"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +19,7 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-loki": "^1.1.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-flash": "0.0.2",
     "express-session": "^1.17.0",
@@ -25,5 +27,9 @@
     "morgan": "^1.9.1",
     "pg": "^8.6.0",
     "pug": "^2.0.4"
+  },
+  "engines": {
+    "node": "12.6.2",
+    "npm": "7.6.2"
   }
 }
